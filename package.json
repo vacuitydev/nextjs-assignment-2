@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "db": "node db/model.js",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -19,7 +20,12 @@
     "@fortawesome/free-solid-svg-icons": "^6.4.2",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "autoprefixer": "^10.4.15",
+    "dotenv": "^16.3.1",
     "next": "^13.4.19",
+    "pg": "^8.11.3",
+    "pg-hstore": "^2.3.4",
+    "psql": "^0.0.1",
+    "sequelize": "^6.33.0",
     "tailwindcss": "^3.3.3"
   }
 }

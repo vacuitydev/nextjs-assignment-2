@@ -3,6 +3,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Hero from "./components/Hero"
 import Footer from "./components/Footer"
 const mainDrawerId = "main-drawer";
+import runner from "./db/model"
+runner()
 const items = [
   {
     _id: 1,
