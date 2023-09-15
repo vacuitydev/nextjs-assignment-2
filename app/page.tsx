@@ -1,39 +1,18 @@
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Hero from "./components/Hero"
-import Footer from "./components/Footer"
+import { PrismaClient } from "@prisma/client";
 const mainDrawerId = "main-drawer";
-const items = [
-  {
-    _id: 1,
-    name: "Breads",
-    description: "Delight in Our Freshly Baked Artisanal Breads!",
-    image: "assets/category/category1.jpg",
-    cost: "30"
-  },
-  {
-    _id: 2,
-    name: "Muffins & Cookies",
-    description: "The softest",
-    image: "assets/category/muffin.jpg",
-    cost: "40"
-  },
-  {
-    _id: 3,
-    name: "Sweet things",
-    description: "The sweetest of them all",
-    image: "assets/category/category3.jpg",
-    cost: "50"
-  },
-  {
-    _id: 4,
-    name: "Donuts",
-    description: "The specialest donuts",
-    image: "assets/category/category4.jpg",
-    cost: "60"
-  },
-];
-export default function Home() {
+const prisma = new PrismaClient();
+let  items= [] 
+const initItems = async()=>{
+  items= await prisma.items.findMany({})
+
+}
+
+export default async function Home() {
+  await initItems();
+  console.log("Items", items)
   return (
     <main>
         <div className="w-full h-8" />
@@ -45,7 +24,7 @@ export default function Home() {
               {items.map((item) => (
                 <div key={item.name} className="card card-compact shadow-xl">
                   <img
-                    src={item.image}
+                    src={`/assets/category/${item.slug}.jpg`}
                     alt={"Picture of " + item.name}
                     className="object-cover h-40"
                   />
