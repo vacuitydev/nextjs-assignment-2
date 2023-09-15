@@ -36,7 +36,7 @@ const items = [
 export default function Home() {
   return (
     <main>
-          <div className="w-full h-8" />
+        <div className="w-full h-8" />
           <p className="text-5xl font-bold fancy md:pl-36 pl-2">New items</p>
           <Hero />
           <div className="divider w-10/12 mx-auto" />
@@ -66,7 +66,6 @@ export default function Home() {
               ))}
             </div>
           </div>
-          <Footer />
 
     </main>
   )

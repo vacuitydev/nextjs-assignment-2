@@ -5,7 +5,6 @@ import {
   faCartShopping,
   faMagnifyingGlass,
 } from "@fortawesome/free-solid-svg-icons";
-import Cart from "./Cart";
 
 export default function Topbar() {
   return (
@@ -13,7 +12,7 @@ export default function Topbar() {
       id="topbar"
       className="relative top-0 w-full z-[10] h-20 bg-palette-brand flex drop-shadow-md"
     >
-      <div className="w-1/4 h-full bg-transparent flex items-center justify-start pl-4 text-2xl text-palette-accent ">
+      <div className="w-1/4 h-full bg-transparent flex items-center justify-start text-4xl text-palette-accent ">
         <FontAwesomeIcon icon={faBars} className="cursor-pointer select-none" />
       </div>
       <div className="w-1/2 h-full text-palette-brand-dull text-center flex items-center justify-center">
@@ -29,16 +28,8 @@ export default function Topbar() {
                 <FontAwesomeIcon icon={faCartShopping} />
               </div>
             </label>
-            <div
-              tabIndex={0}
-              className="dropdown-content z-[2] menu p-2 shadow bg-palette-brand-dull rounded-box"
-            >
-              <div className="w-80">
-                <Cart></Cart>
-              </div>
             </div>
           </div>
-        </div>
         <div
           className="h-15 w-full rounded-full border p-2 
         border-palette-accent text-sm overflow-hidden whitespace-nowrap text-ellipsis text-palette-dark md:block hidden"

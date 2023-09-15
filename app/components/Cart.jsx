@@ -5,7 +5,7 @@ const cartItems = [
 const Cart = () => {
   return (
     <>
-      {cartItems ?
+      {/* {cartItems ?
         cartItems.map((item) => {
           <div className="flex whitespace-nowrap overflow-hidden w-full justify-between">
             return (
@@ -41,7 +41,7 @@ const Cart = () => {
         <div>
           Total: <span className="ml-2 text-palette-accent text-3xl">900</span>
         </div>
-      </div>
+      </div> */}
     </>
   );
 };
