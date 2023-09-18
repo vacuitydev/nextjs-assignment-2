@@ -15,9 +15,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="min-h-screen max-w-screen bg-palette-brand-dull">
-        <Topbar/>
-        {children}
+      <body className="min-h-screen max-w-screen bg-palette-brand-dull flex flex-col">
+        <div className="h-20">
+          <Topbar/>
+        </div>
+        <div className="grow">
+          {children}
+        </div>          
         <Footer /> 
 
       </body>
