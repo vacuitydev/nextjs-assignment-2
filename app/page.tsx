@@ -1,9 +1,7 @@
 import Hero from "./components/Hero";
 import { PrismaClient } from "@prisma/client";
 import ItemsOverview from "./items/components/overview";
-import errorImage from "/error.png"
-const mainDrawerId = "main-drawer";
-const prisma = new PrismaClient();
+import prisma from "../api/prisma"
 let items = [];
 const initItems = async () => {
   items = await prisma.item.findMany({

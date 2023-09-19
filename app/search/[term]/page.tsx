@@ -1,7 +1,6 @@
 import { type item } from "@prisma/client";
-import { PrismaClient } from "@prisma/client";
 import ItemsOverview from "../../items/components/overview";
-const prisma = new PrismaClient();
+import prisma from "../../../api/prisma";
 const searchForTerm = async (term): Promise<item[]> => {
   const searchResults = await prisma.item.findMany({
     where: {

@@ -2,7 +2,7 @@ import { PrismaClient, type item } from "@prisma/client";
 import { GetStaticPaths } from "next";
 import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
-const prisma = new PrismaClient();
+import prisma from "../../../api/prisma";
 export const getStaticPaths = (async () => {
   const slugs = await prisma.item.findMany({
     select: {
