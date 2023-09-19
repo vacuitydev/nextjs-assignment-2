@@ -21,7 +21,14 @@ body {
   background: linear-gradient(
       to bottom,
       transparent,
-      rgb(var(--background-end-rgb))
+      rgb(var(--background-start-rgb))
     )
-    rgb(var(--background-start-rgb));
+    #05204a;
+}
+
+h2{
+  @apply text-4xl font-bold text-palette-brand
+}
+h1{
+  @apply text-6xl font-bold text-palette-brand 
 }
