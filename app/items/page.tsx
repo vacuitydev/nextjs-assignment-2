@@ -1,4 +1,3 @@
-import { PrismaClient } from "@prisma/client";
 import ItemsOverview from "./components/overview";
 
 import prisma from "../../api/prisma";

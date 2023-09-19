@@ -1,4 +1,4 @@
-import { PrismaClient, type item } from "@prisma/client";
+import { type item } from "@prisma/client";
 import { GetStaticPaths } from "next";
 import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
