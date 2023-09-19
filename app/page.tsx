@@ -8,6 +8,10 @@ let items = [];
 const initItems = async () => {
   items = await prisma.item.findMany({
     select:{
+      id: true,
+      name: true,
+      description: true,
+      slug: true,
       long_description:false
     }
   });
